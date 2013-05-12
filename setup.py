@@ -11,6 +11,6 @@ setup(name='nosecomplete',
                      "Operating System :: POSIX :: Linux",
                      "Operating System :: MacOS :: MacOS X"],
       license='BSD',
-      py_modules=['nosecomplete'],
+      py_modules=['nosecomplete', 'nose2complete'],
       install_requires=['nose'],
-      entry_points={'console_scripts': ['nosecomplete=nosecomplete:main']})
+      entry_points={'console_scripts': ['nosecomplete=nosecomplete:main', 'nose2complete=nose2complete:main']})

@@ -32,7 +32,7 @@ Test discovery can be done in two ways:
 
 Using the `-s` option you can control which test discovery method is
 used. The default method is `python`.
-	
+
 Installation
 ============
 
@@ -103,4 +103,11 @@ Add the following snippet to your .zshrc:
         cur="${COMP_WORDS[COMP_CWORD]}"
         COMPREPLY=(`nosecomplete ${cur} 2>/dev/null`)
     }
+    _nose2()
+    {
+        cur="${COMP_WORDS[COMP_CWORD]}"
+        COMPREPLY=(`nose2complete ${cur} 2>/dev/null`)
+    }
+
     complete -o nospace -F _nosetests nosetests
+    complete -o nospace -F _nose2 nose2
